@@ -1,0 +1,34 @@
+{% extends "base_shopping.html" %}
+
+{% block title %}Shopping Home{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h1 class="display-5 fw-bold">Welcome</h1>
+        <p class="lead">
+            Manage items you want to purchase efficiently with the Shopping List application.
+        </p>
+    </div>
+
+    <div class="card shadow-sm mx-auto" style="max-width: 600px;">
+        <div class="card-body">
+            <h4 class="card-title mb-3">Features</h4>
+
+            <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item">Add new shopping items with name, description, and priority.</li>
+                <li class="list-group-item">View all items you have saved.</li>
+                <li class="list-group-item">Mark items as purchased.</li>
+                <li class="list-group-item">Edit existing items.</li>
+                <li class="list-group-item">Delete items you no longer need.</li>
+            </ul>
+
+            <div class="text-center">
+                <a href="{% url 'add_item' %}" class="btn btn-primary btn-lg">
+                    Go to Shopping List
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
