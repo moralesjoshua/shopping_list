@@ -15,6 +15,9 @@
                 <th>Description</th>
                 <th>Priority</th>
                 <th>Purchased?</th>
+                <th>Edit</th>
+                <th>Toggle Purchased</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -40,6 +43,12 @@
                         <span class="badge bg-secondary">No</span>
                     {% endif %}
                 </td>
+
+                </td>
+                <td>
+                    <a href="{% url 'edit_item' item.id %}" class="btn btn-sm btn-primary">
+                        Edit
+                    </a>
                 <td>
                     <a href="{% url 'purchased' item.id %}" class="btn btn-sm btn-warning">
                         Yes/No
